@@ -5,36 +5,35 @@ class Post extends Model {}
 
 Post.init(
   {
-    // Define columns
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
+    content: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'post',
   }
 );
 
-module.exports = User;
+module.exports = Post;
+
