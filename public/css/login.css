@@ -1,0 +1,107 @@
+/*---------- COLORS ----------*/
+:root {
+    --mint: #D9E9D3;
+    --darkgrey: #666666;
+    --lightgrey: #A7A7A7;
+}
+
+/*---------- BODY ----------*/
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+/*---------- LOGIN FORM ----------*/
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black solid 4px;
+    margin: 50px;
+    width: 50%;
+}
+
+.heading {
+    color: var(--mint);
+    background-color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+.login-email {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.login-password {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.login-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
+
+/*---------- SIGNUP FORM ----------*/
+.signup-card {
+    border: black solid 4px;
+    margin: 50px;
+    width: 35%;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+.signup-username {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.signup-email {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.signup-password {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.signup-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
