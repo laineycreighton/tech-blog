@@ -1,0 +1,14 @@
+<section class="container">
+  <h3 class="post-title">{{post.title}}</h3>
+  <h4>Posted by {{post.user_id}} on {{format_time post.post_date}}</h4>
+  <p>{{post.content}}</p>
+  {{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each post.comment as |post|}}
+    {{> post-details}}
+    {{/each}}
+  </section>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

@@ -1,0 +1,48 @@
+:root {
+    --mint: #D9E9D3;
+    --darkgrey: #666666;
+    --lightgrey: #A7A7A7;
+}
+
+/*----------BODY ----------*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--mint);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+.top {
+    background-color: black;
+    padding: 20px;
+}
+
+/*---------- NAV BAR ----------*/
+nav {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+nav a {
+    color: var(--mint);
+    text-decoration: none;
+}
+
+/*---------- HEADER ----------*/
+header {
+    background-color: var(--mint);
+    border-radius: 5px;
+    box-shadow: 3px 3px var(--lightgrey);
+    width: 40%;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    line-height: 1.5;
+}

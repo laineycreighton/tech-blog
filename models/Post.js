@@ -27,7 +27,7 @@ Post.init(
       references: {
         model: 'user',
         key: 'id',
-      },1
+      },
     },
   },
   {

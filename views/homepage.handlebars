@@ -1,12 +1,5 @@
-{{> header}}
-
-<h1>Welcome to the Tech Blog</h1>
-
-{{#if loggedIn}}
-  <a href="/dashboard">Go to Dashboard</a>
-{{else}}
-  <a href="/login">Log In</a>
-  <a href="/register">Sign Up</a>
-{{/if}}
-
-{{> footer}}
+<div class="home-posts">
+  {{#each posts as |post|}}
+  {{> view-posts}}
+  {{/each}}
+</div>
