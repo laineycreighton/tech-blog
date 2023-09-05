@@ -1,0 +1,37 @@
+{{#if loggedIn}}
+<div class="row ">
+    <ul class="d-flex justify-content-center">
+    {{#each posts}}
+        <a class="btn col-8" href="/dashboard/{{id}}">
+            <li class="bg-secondary text-white p-3 d-flex justify-content-between">
+                <span>{{title}} </span>  
+                <span>created on {{formatDate post_date}}</span>
+            </li>
+        </a>
+    {{/each}}
+    </ul>
+</div>
+
+<div class="d-flex justify-content-center align-items-end">
+    <button id="new-post" class="btn btn-primary my-3">New Post</button>
+</div>
+{{else}}
+
+<div class="row d-flex justify-content-center">
+    <h2>Log in to upload your post!</h2>
+</div>
+{{/if}}
+<form id="post-form" class="col-6 m-3">
+        <label for="text-box">Title</label>
+        <textarea class="form-control mb-3" placeholder="Title goes here" id="title"></textarea>
+        
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Content goes here" id="content" style="height: 100px"></textarea>
+            <label for="text-box">Content</label>
+        </div>
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary m-3">Submit</button>
+        </div>
+</form> 
+
+<script src="./js/dashboard.js"></script>

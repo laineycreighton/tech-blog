@@ -1,5 +1,19 @@
-<div class="home-posts">
-  {{#each posts as |post|}}
-  {{> view-posts}}
+<div>
+  {{#each posts}}
+  <div class="row">
+    <a class="link-light link-underline link-underline-opacity-0" href="/{{id}}">
+<article>
+    <div class="post-heading">
+        <h2>{{title}}</h2>
+        <div>
+            <p>Posted by {{user_id}} on {{post_date}}</p>
+        </div>
+    </div>
+    <div class="post-content">
+        {{body}}
+    </div>
+</article>
+    </a>
+  </div>
   {{/each}}
 </div>
