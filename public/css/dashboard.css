@@ -1,0 +1,117 @@
+/*---------- COLORS ----------*/
+:root {
+    --mint: #D9E9D3;
+    --darkgrey: #666666;
+    --lightgrey: #A7A7A7;
+}
+
+/*---------- BODY ----------*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.new-btn {
+    /* outline: red dashed 3px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#new-post-button {
+    border: black solid 3px;
+    background-color: var(--mint);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.create-post-btn {
+    border: black solid 3px;
+    background-color: var(--mint);
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+/*---------- NEW POST FORM ----------*/
+.new-post-form {
+    /* outline: red dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black solid 4px;
+    margin: 50px;
+    width: 50%;
+}
+
+.new-post-heading {
+    /* outline: blue dashed 3px; */
+    color: var(--mint);
+    background-color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+h4 {
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.post-inputs {
+    /* outline: green dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.post-name {
+    /* outline: blue dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.post-name label {
+    width: 90%;
+    text-align: left;
+}
+
+.post-name input {
+    width: 90%;
+}
+
+.post-body {
+    /* outline: blue dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    text-align: left;
+}
+
+.post-body label {
+    width: 90%;
+    text-align: left;
+}
+
+.post-body input {
+    width: 90%;
+}
+
+.create-post-btn {
+    margin: 10px;
+}

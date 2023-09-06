@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +8,15 @@
 <body>
   <div class="top">
     <nav>
-      <a href="/">Home</a>
-      <a href="/">Dashboard</a>
-      {{#if loggedIn}}
+      <a href="/homepage">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      {{#if logged_in}}
       <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
       <a href="/login">Login</a>
       {{/if}}
     </nav>
-    <header>
+    <header class="main-heading">
       <h1>The Tech Blog</h1>
     </header>
   </div>
@@ -28,9 +25,7 @@
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
-
-</html>

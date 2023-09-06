@@ -2,64 +2,54 @@
 <link rel="stylesheet" href="/css/login.css">
 
 <!-- Main -->
-<main class="login-page">
+<main>
 
-
-
-  <!-- Login -->
+  <!-- Login Section-->
   <div class="login-card">
-    <!-- Header -->
-    <div class="heading">
+
+    <header class="heading">
       <h2>Login</h2>
-    </div>
+    </header>
 
     <!-- Login Form -->
     <form class="form login-form">
-      <!-- Email -->
-      <div class="form-group login-email">
-        <label for="email-login">Username:</label>
-        <input class="form-input" type="text" id="email-login" />
+      <div class="form-group username-section">
+        <label for="username-login">Username:</label>
+        <input class="form-input" type="text" id="username-login" />
       </div>
-      <!-- Password -->
-      <div class="form-group login-password">
+      <div class="form-group password-section">
         <label for="password-login">Password:</label>
         <input class="form-input" type="password" id="password-login" />
       </div>
-      <!-- Submit -->
-      <div class="form-group login-submit">
+      <div class="form-group submit-login">
         <button class="btn btn-primary" type="submit">Login</button>
       </div>
     </form>
   </div>
 
 
-
-
-
   <!-- Sign Up -->
-  <div class="signup-card">
-    <!-- Header -->
-    <div class="heading">
-    <h2>Signup</h2>
-    </div>
+  <div class="login-card">
 
-    <!-- Sign Up Form -->
+    <header class="heading">
+      <h2>Sign Up</h2>
+    </header>
+
     <form class="form signup-form">
-      <div class="form-group signup-username">
+      <div class="form-group username-section">
         <label for="username-signup">Username:</label>
         <input class="form-input" type="text" id="username-signup" />
       </div>
-      <!-- Password -->
-      <div class="form-group signup-password">
+      <div class="form-group password-section">
         <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
-      <!-- Submit -->
-      <div class="form-group signup-submit">
+      <div class="form-group submit-signup">
         <button class="btn btn-primary" type="submit">Sign Up</button>
       </div>
     </form>
   </div>
+
 </main>
 
 <script src="./js/login.js"></script>

@@ -35,6 +35,7 @@ main {
 h2 {
     margin: 0;
     padding: 5px;
+    font-size: 20px;
 }
 
 .login-form {
@@ -45,19 +46,7 @@ h2 {
     width: 100%;
 }
 
-.login-email {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-}
-
-.login-password {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-}
-
-.login-submit {
+.submit-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,25 +69,19 @@ h2 {
     width: 100%;
 }
 
-.signup-username {
+.username-section {
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 10px;
 }
 
-.signup-email {
+.password-section {
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 10px;
 }
 
-.signup-password {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-}
-
-.signup-submit {
+.submit-signup {
     display: flex;
     justify-content: center;
     align-items: center;

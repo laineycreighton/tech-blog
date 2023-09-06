@@ -1,19 +1,35 @@
-<div>
-  {{#each posts}}
-  <div class="row">
-    <a class="link-light link-underline link-underline-opacity-0" href="/{{id}}">
-<article>
-    <div class="post-heading">
+<body>
+  {{#each posts as |post|}}
+  <article class="posts">
+    <div class="post-body">
+      <header>
         <h2>{{title}}</h2>
+      </header>
+      <section>
+        <p>{{body}}</p>
+      </section>
+      <form class="add-new-comment">
         <div>
-            <p>Posted by {{user_id}} on {{post_date}}</p>
+          <label for="new-comment"></label>
+          <input class="new-comment" type="text" id="new-comment">
         </div>
+        <div>
+          <button class="add-comment-btn" id="add-comment-btn" data-post-id="{{id}}">Add Comment</button>
+        </div>
+      </form>
     </div>
-    <div class="post-content">
-        {{body}}
+
+    <div class="comment-section" data-post-id="{{id}}">
+      {{#each comments as |comment|}}
+      <div class="comment">
+        <p>Comment by: {{user_id.username}}</p>
+        <p>{{text}}</p>
+      </div>
+      {{/each}}
     </div>
-</article>
-    </a>
-  </div>
+  </article>
   {{/each}}
-</div>
+</body>
+
+<!-- JavaScript -->
+<script src="./js/homepage.js"></script>

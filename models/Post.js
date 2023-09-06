@@ -20,7 +20,8 @@ Post.init(
     },
     post_date: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
+        defaultValue: '08/23/2023',
       },
     user_id: {
       type: DataTypes.INTEGER,
