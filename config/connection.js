@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-let sequelize;
+let Sequelize;
 
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL);
+  Sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
-  sequelize = new Sequelize(
+  Sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,
@@ -18,4 +18,13 @@ if (process.env.JAWSDB_URL) {
   );
 }
 
-module.exports = sequelize;
+Sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Database connection has been established successfully.');
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  });
+
+module.exports = Sequelize;
