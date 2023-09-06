@@ -1,35 +1,50 @@
-<body>
+<!-- CSS Link -->
+<link rel="stylesheet" href="/css/homepage.css">
+
+<section class="post-body">
+  <!-- Existing Posts -->
   {{#each posts as |post|}}
   <article class="posts">
     <div class="post-body">
-      <header>
+      <!-- Post Heading -->
+      <header class="post-title">
         <h2>{{title}}</h2>
       </header>
-      <section>
+      <!-- Post Body -->
+      <section class="post-text">
         <p>{{body}}</p>
       </section>
-      <form class="add-new-comment">
-        <div>
-          <label for="new-comment"></label>
-          <input class="new-comment" type="text" id="new-comment">
-        </div>
-        <div>
-          <button class="add-comment-btn" id="add-comment-btn" data-post-id="{{id}}">Add Comment</button>
-        </div>
-      </form>
     </div>
 
+    <!-- Comments -->
     <div class="comment-section" data-post-id="{{id}}">
+      <!-- Comment Heading -->
+      <div class="comment-heading">
+        <h2>Comments:</h2>
+      </div>
+      <!-- Existing Comments -->
       {{#each comments as |comment|}}
       <div class="comment">
         <p>Comment by: {{user_id.username}}</p>
         <p>{{text}}</p>
       </div>
       {{/each}}
+      <!-- Add New Comment -->
+      <form class="add-new-comment">
+        <!-- Comment Input -->
+        <div class="comment-form">
+          <label for="new-comment"></label>
+          <input class="new-comment" type="text" id="new-comment">
+        </div>
+        <!-- Comment Button -->
+        <div class="comment-button">
+          <button class="add-comment-btn" id="add-comment-btn" data-post-id="{{id}}">Add Comment</button>
+        </div>
+      </form>
     </div>
   </article>
   {{/each}}
-</body>
+</section>
 
 <!-- JavaScript -->
 <script src="./js/homepage.js"></script>

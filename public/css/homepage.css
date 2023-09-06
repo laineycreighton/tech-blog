@@ -1,0 +1,113 @@
+/*---------- COLORS ----------*/
+:root {
+    --mint: #D9E9D3;
+    --darkgrey: #666666;
+    --lightgrey: #A7A7A7;
+}
+
+/*---------- BODY ----------*/
+.post-body {
+    /* outline: red dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*---------- POST ----------*/
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 30px;
+    border: black solid 3px;
+}
+
+/*---------- POST TITLE ----------*/
+.post-title {
+    background-color: black;
+    color: var(--mint);
+    text-align: left;
+    width: 100%;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+/*---------- POST BODY ----------*/
+.post-text {
+    /* outline: blue dashed 3px; */
+    text-align: left;
+    width: 100%;
+}
+
+.post-text p {
+    margin-left: 10px;
+}
+
+/*---------- POST COMMENTS ----------*/
+.comment-section {
+    /* outline: green dashed 3px; */
+    width: 100%;
+    text-align: left;
+}
+
+.comment-heading {
+    /* outline: blue dashed 3px; */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--mint);
+    background-color: var(--darkgrey);
+    padding: 2px;
+}
+
+/*---------- VIEW COMMENTS ----------*/
+.comment {
+    /* outline: purple dashed 3px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+}
+
+/*---------- ADD COMMENT ----------*/
+.add-new-comment {
+    /* outline: blue dashed 3px; */
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#new-comment {
+    width: 90%;
+    margin: 5px;
+}
+
+.comment-button {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin: 5px;
+}

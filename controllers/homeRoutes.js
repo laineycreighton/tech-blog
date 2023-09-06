@@ -19,29 +19,27 @@ const { User, Post, Comment } = require('../models');
 
 //---------- Homepage | Get All Posts ----------//
 router.get('/homepage', withAuth, async (req, res) => {
-  try {
-    const timelinePosts = await Post.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
+	try {
+		//Get all posts
+		const allPosts = await Post.findAll({
+			include: [{
+				model: Comment
+			}]
+		});
 
-        {
-          model: Comment,
-          attributes: ["text", "post_date", "user_id"],
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
-        },
-      ],
-    });
-    res.render('homepage', {timelinePosts, logged_in: req.session.logged_in });
-  } catch (error) {
-    res.json({ error, loggedIn: req.session.log_in })
-  }
-})
+		//Serialize the post data so the template (handlebars) can read it
+		const posts = allPosts.map((post) => post.get({ plain: true }));
+		console.log(posts);
+		//Displaying the route on the specified handlebar
+		res.render('homepage', {
+			posts,
+			logged_in: req.session.logged_in
+		});
+
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
 
 //---------- Post | Get One Post ----------//
 router.get("/posts/:id", async (req, res) => {
