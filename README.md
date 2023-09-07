@@ -56,7 +56,7 @@ Welcome to the Tech Blog, a web application that combines the power of Node.js, 
 
 ## Deployment
 
-Website URL: [Lainey Creighton | Software Developer](https://laineycreighton.netlify.app/)
+Website URL: [Tech Blog](https://boiling-garden-22279-8abc1c9e4fe7.herokuapp.com/)
 
 ![alt text](./public/images/tech-blog-login.png)
 
