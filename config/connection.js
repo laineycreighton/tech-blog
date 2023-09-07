@@ -13,18 +13,9 @@ if (process.env.JAWSDB_URL) {
     {
       host: process.env.DB_HOST,
       dialect: 'mysql',
-      port: 3306,
+      port: 3306
     }
   );
 }
-
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Database connection has been established successfully.');
-  })
-  .catch((err) => {
-    console.error('Unable to connect to the database:', err);
-  });
 
 module.exports = sequelize;
